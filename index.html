@@ -1,0 +1,1049 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>세탁 응급 구조대 : 버리지 말고 소생하세요!</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Pretendard', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .tab-transition {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col pb-24 selection:bg-emerald-100">
+
+  <!-- Header Section -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 py-3.5 shadow-xs">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center shadow-md shadow-emerald-200">
+          <i class="fa-solid fa-heart-pulse text-white text-base"></i>
+        </div>
+        <div>
+          <h1 class="text-sm font-black tracking-tight text-slate-900 flex items-center gap-1.5">
+            의류 응급 구조대
+            <span class="text-[9px] bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded-full font-extrabold border border-emerald-300">GREEN RESCUE</span>
+          </h1>
+          <p class="text-[10px] text-slate-500 font-semibold">쉽게 버리지 않고 치료하는 친환경 생활</p>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <span class="text-[11px] bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full border border-emerald-100 font-extrabold shadow-3xs" id="score-badge">
+          🌱 탄소 저감: 0 kg
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-md w-full mx-auto px-4 py-4" id="app-container">
+
+    <!-- 강력한 비주얼 캠페인 배너 -->
+    <div class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800 text-white rounded-2xl p-5 mb-5 shadow-md relative overflow-hidden">
+      <!-- 장식용 패턴 배경 -->
+      <div class="absolute right-0 bottom-0 opacity-10 text-9xl translate-x-1/4 translate-y-1/4">
+        <i class="fa-solid fa-leaf"></i>
+      </div>
+      <span class="text-[9px] bg-white/20 text-white font-extrabold tracking-widest px-2 py-0.5 rounded-full border border-white/25 uppercase">LIFESPAN CAMPAIGN</span>
+      <h2 class="text-xl font-black tracking-tight mt-2.5 leading-snug">
+        얼룩 한 방울 때문에<br>아까운 옷을 버리시겠습니까?
+      </h2>
+      <p class="text-[11px] text-emerald-100/90 leading-relaxed mt-2.5 font-medium">
+        옷 한 벌을 더 사면, <strong class="text-white font-extrabold">소나무 4줄기를 새로 심는 것</strong>과 다름없는 탄소 저감 효과를 낳습니다. 씻어내고, 치료해서 오래도록 지구와 함께 옷을 입어주세요.
+      </p>
+      <div class="mt-4 flex items-center gap-3 bg-white/10 rounded-xl p-3 border border-white/10">
+        <i class="fa-solid fa-circle-exclamation text-amber-300 text-sm"></i>
+        <span class="text-[10.5px] font-bold text-white/95">오늘 당신이 구한 옷은 평생의 기후 기적이 됩니다.</span>
+      </div>
+    </div>
+
+    <!-- TAB 1: 얼룩 응급 구조대 -->
+    <section id="tab-stain" class="tab-content space-y-4">
+      
+      <!-- 캠페인 경고 메시지 카드 -->
+      <div class="bg-red-50 border-l-4 border-red-500 rounded-r-xl p-4 flex items-start gap-3 shadow-3xs">
+        <div class="text-red-500 text-base mt-0.5"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div>
+          <h4 class="text-xs font-extrabold text-red-950 uppercase tracking-wider">잠깐! 물부터 대지 마세요</h4>
+          <p class="text-[11px] text-red-900/95 leading-relaxed mt-0.5 font-medium">
+            얼룩 종류를 모른 채 물을 묻히거나 수건으로 빡빡 비비면, 섬유 조직 내부 깊숙이 영구 고착됩니다. 버려야 할 쓰레기로 만들기 전에 <strong class="font-bold underline">먼저 소생 처치법을 분석하세요!</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- 얼룩 그리드 메뉴 (15종 세분화) -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider">응급 의류 소생실 접수처</h3>
+          <span class="text-[10px] text-emerald-600 font-bold"><i class="fa-solid fa-circle-dot animate-pulse"></i> 15개 오염 진료 중</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          
+          <!-- 김치국물 계열 -->
+          <button onclick="showStainSolution('kimchi')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-orange-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🌶️</div>
+            <span class="text-[11px] font-bold text-slate-700">김치 국물</span>
+          </button>
+          
+          <!-- 볼펜/유성펜 자국 -->
+          <button onclick="showStainSolution('pen')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-blue-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🖊️</div>
+            <span class="text-[11px] font-bold text-slate-700">볼펜·잉크</span>
+          </button>
+
+          <!-- 커피·녹차 -->
+          <button onclick="showStainSolution('coffee')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-amber-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">☕</div>
+            <span class="text-[11px] font-bold text-slate-700">커피·음료</span>
+          </button>
+
+          <!-- 비비·파운데이션 -->
+          <button onclick="showStainSolution('makeup')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-pink-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">💄</div>
+            <span class="text-[11px] font-bold text-slate-700">파데·화장품</span>
+          </button>
+
+          <!-- 삼겹살·식용 기름 -->
+          <button onclick="showStainSolution('grease')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-yellow-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🥓</div>
+            <span class="text-[11px] font-bold text-slate-700">고기 기름</span>
+          </button>
+
+          <!-- 와인/과일즙 -->
+          <button onclick="showStainSolution('wine')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-purple-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🍷</div>
+            <span class="text-[11px] font-bold text-slate-700">와인·과즙</span>
+          </button>
+
+          <!-- 피·혈흔 계열 -->
+          <button onclick="showStainSolution('blood')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-red-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🩸</div>
+            <span class="text-[11px] font-bold text-slate-700">피·코피</span>
+          </button>
+
+          <!-- 황색 소스/카레류 -->
+          <button onclick="showStainSolution('curry')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-amber-100/40 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🍛</div>
+            <span class="text-[11px] font-bold text-slate-700">황색 소스</span>
+          </button>
+
+          <!-- 땀/목때 황변 -->
+          <button onclick="showStainSolution('yellowing')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-teal-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">👕</div>
+            <span class="text-[11px] font-bold text-slate-700">누런 황변</span>
+          </button>
+
+          <!-- 초콜릿·진흙·흙먼지 -->
+          <button onclick="showStainSolution('chocolate')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-yellow-900/10 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🍫</div>
+            <span class="text-[11px] font-bold text-slate-700">흙·초콜릿</span>
+          </button>
+
+          <!-- 껌·밀착 이물질 -->
+          <button onclick="showStainSolution('gum')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-rose-100 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🍬</div>
+            <span class="text-[11px] font-bold text-slate-700">껌·접착물</span>
+          </button>
+
+          <!-- 크레파스·물감·유색 염료 -->
+          <button onclick="showStainSolution('crayon')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-emerald-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🎨</div>
+            <span class="text-[11px] font-bold text-slate-700">염료·물감</span>
+          </button>
+
+          <!-- 신규 1: 잔디·풀밭 즙 -->
+          <button onclick="showStainSolution('grass')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-emerald-100 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🌿</div>
+            <span class="text-[11px] font-bold text-slate-700">풀·잔디즙</span>
+          </button>
+
+          <!-- 신규 2: 피지·데오도란트 -->
+          <button onclick="showStainSolution('deodorant')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-indigo-50 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🧼</div>
+            <span class="text-[11px] font-bold text-slate-700">피지·데오</span>
+          </button>
+
+          <!-- 신규 3: 토마토케첩·빨간 양념 -->
+          <button onclick="showStainSolution('ketchup')" class="bg-white hover:bg-slate-100 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center transition-all duration-200 active:scale-95 group shadow-3xs">
+            <div class="w-9 h-9 rounded-lg bg-red-100/60 text-base flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">🥫</div>
+            <span class="text-[11px] font-bold text-slate-700">케첩·빨간즙</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- 솔루션 카드 영역 -->
+      <div id="solution-container" class="hidden tab-transition animate-fade-in">
+        <!-- 동적으로 주입될 얼룩 구급 안내서 -->
+      </div>
+
+      <!-- 기본 상태 안내문 -->
+      <div id="solution-placeholder" class="border-2 border-dashed border-emerald-100 rounded-2xl p-8 text-center text-slate-400 bg-white shadow-3xs">
+        <i class="fa-solid fa-recycle text-3xl mb-3 block text-emerald-300 animate-spin-slow"></i>
+        <span class="text-xs block leading-relaxed font-semibold">
+          의류 수명을 심폐소생할 시간입니다.<br>
+          <strong class="text-emerald-600 font-extrabold">위의 원인 물질 버튼</strong>을 누르면<br>지구를 지키는 특별 소생 처방전이 펼쳐집니다.
+        </span>
+      </div>
+    </section>
+
+    <!-- TAB 2: 미스터리 라벨 도감 (세탁 기호 퀴즈 게임) -->
+    <section id="tab-quiz" class="tab-content hidden space-y-4">
+      
+      <!-- 캠페인 배너 카드 -->
+      <div class="bg-sky-50 border-l-4 border-sky-500 rounded-r-xl p-4 flex items-start gap-3 shadow-3xs">
+        <div class="text-sky-500 text-base mt-0.5"><i class="fa-solid fa-tags"></i></div>
+        <div>
+          <h4 class="text-xs font-extrabold text-sky-950 uppercase tracking-wider">잘못 읽은 라벨이 옷을 해칩니다</h4>
+          <p class="text-[11px] text-sky-900/95 leading-relaxed mt-0.5 font-medium">
+            라벨에 그려진 기호를 무시한 채 뜨겁게 세탁하고 삶으면, 산지 얼마 안 된 소중한 옷이 쪼그라들어 즉시 쓰레기통에 처박힙니다. <strong class="font-bold">기호 소생 서바이벌</strong>로 올바른 지식을 기르고 더 건강한 환경을 지키세요!
+          </p>
+        </div>
+      </div>
+
+      <!-- 도감 / 게임 모드 선택 헤더 -->
+      <div class="bg-white p-1 rounded-xl border border-slate-200 flex shadow-3xs">
+        <button onclick="switchQuizMode('game')" id="btn-mode-game" class="flex-1 py-1.5 text-xs font-bold rounded-lg text-center bg-emerald-500 text-white transition-all">
+          🎮 서바이벌 소생 퀴즈
+        </button>
+        <button onclick="switchQuizMode('dictionary')" id="btn-mode-dict" class="flex-1 py-1.5 text-xs font-bold rounded-lg text-center text-slate-500 transition-all">
+          📚 세탁 라벨 도감
+        </button>
+      </div>
+
+      <!-- 1. 퀴즈 게임 플레이 화면 -->
+      <div id="quiz-game-panel" class="space-y-4">
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 relative overflow-hidden shadow-sm">
+          <!-- 진척도 & 목숨 -->
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-[10px] text-emerald-600 font-bold uppercase tracking-wider" id="quiz-progress-text">QUESTION 1/5</span>
+            <div class="flex gap-1 text-red-400" id="quiz-hearts">
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+
+          <!-- 문제 기호 출력창 -->
+          <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 flex flex-col items-center justify-center min-h-[150px] relative">
+            <div id="quiz-symbol-svg" class="w-20 h-20 text-slate-800 flex items-center justify-center">
+              <!-- SVG 동적 주입 -->
+            </div>
+            <p class="text-[10px] text-slate-400 mt-2 font-bold text-center">이 케어라벨을 무시하면 옷을 망치고 지구에 폐기물을 더하게 됩니다!</p>
+          </div>
+
+          <!-- 3지선다 버튼 리스트 -->
+          <div class="mt-4 space-y-2" id="quiz-options">
+            <!-- 동적 버튼 생성 -->
+          </div>
+        </div>
+
+        <!-- 피드백 알림 영역 -->
+        <div id="quiz-feedback" class="hidden p-3 rounded-xl text-center font-bold text-xs tab-transition">
+          <!-- 메시지 -->
+        </div>
+      </div>
+
+      <!-- 2. 세탁 라벨 도감 리스트 (Dictionary) -->
+      <div id="quiz-dictionary-panel" class="hidden space-y-3">
+        <div class="space-y-2 max-h-[420px] overflow-y-auto pr-1 no-scrollbar" id="dictionary-list">
+          <!-- 동적 주입 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: 소재별 '롱런' 보관법 -->
+    <section id="tab-fabric" class="tab-content hidden space-y-4">
+      
+      <!-- 캠페인 배너 카드 -->
+      <div class="bg-emerald-50 border-l-4 border-emerald-500 rounded-r-xl p-4 flex items-start gap-3 shadow-3xs">
+        <div class="text-emerald-500 text-base mt-0.5"><i class="fa-solid fa-seedling"></i></div>
+        <div>
+          <h4 class="text-xs font-extrabold text-emerald-950 uppercase tracking-wider">지구를 지키는 롱런(Long-run) 서약</h4>
+          <p class="text-[11px] text-emerald-900/95 leading-relaxed mt-0.5 font-medium">
+            새 옷 한 벌을 만들기 위해서는 약 <strong class="font-bold">2,700리터의 물</strong>이 고통스럽게 소비됩니다. 한 번 소유한 옷을 버리지 않고 온전하게 오래 입는 일이야말로 탄소 배출량을 기하급수적으로 낮추는 가장 근사한 환경 기부입니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- 소재 아코디언 카드 그룹 -->
+      <div class="space-y-2.5">
+        <!-- 면 (Cotton) -->
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-3xs">
+          <button onclick="toggleAccordion('fabric-cotton')" class="w-full px-4.5 py-3.5 flex items-center justify-between text-left">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🌱</span>
+              <div>
+                <h4 class="font-extrabold text-slate-800 text-xs">면 (Cotton)</h4>
+                <p class="text-[10px] text-slate-400 font-semibold">티셔츠, 셔츠, 타월, 침구류 등</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="icon-fabric-cotton"></i>
+          </button>
+          <div id="content-fabric-cotton" class="hidden px-5 pb-4 pt-1 border-t border-slate-100 bg-slate-50/50 space-y-3 text-xs text-slate-600">
+            <div>
+              <span class="text-[9px] font-extrabold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">수축 한계점</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-500">열에 취약해 고온 세탁기 및 건조기에 들어가는 즉시 쪼그라들어 결국 버려지게 됩니다.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-extrabold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">올바른 소생 관리</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-600">미지근하거나 차가운 냉수 세탁이 옷 수명을 3배 이상 늘려 줍니다. 회전식 회오리 건조 대신 수평 자연 건조를 강력 권장합니다.</p>
+            </div>
+            <div class="bg-emerald-50 border border-emerald-100 p-3.5 rounded-lg">
+              <span class="text-[10.5px] font-extrabold text-emerald-900 flex items-center gap-1">
+                <i class="fa-solid fa-leaf"></i> 버리지 않기 위한 롱런 꿀팁
+              </span>
+              <p class="mt-1 text-[11px] text-emerald-700 leading-relaxed font-semibold">흰 면 옷은 땀자국 황변으로 쉽게 쓰레기가 되죠. 유색 티셔츠는 강한 직사광선 아래에 두면 색상이 급속도로 변하니, 반대로 그늘에 뒤집어 건조해야 오래오래 살아남습니다!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 데님 (Denim) -->
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-3xs">
+          <button onclick="toggleAccordion('fabric-denim')" class="w-full px-4.5 py-3.5 flex items-center justify-between text-left">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">👖</span>
+              <div>
+                <h4 class="font-extrabold text-slate-800 text-xs">데님 (Denim)</h4>
+                <p class="text-[10px] text-slate-400 font-semibold">변치 않는 청바지, 청자켓 등</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="icon-fabric-denim"></i>
+          </button>
+          <div id="content-fabric-denim" class="hidden px-5 pb-4 pt-1 border-t border-slate-100 bg-slate-50/50 space-y-3 text-xs text-slate-600">
+            <div>
+              <span class="text-[9px] font-extrabold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">탈색 한계점</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-500">잦은 물세탁 시 인디고 파란 염료가 급속도로 빠져나가 칙칙하게 노화되어 버려지게 됩니다.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-extrabold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">올바른 소생 관리</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-600">세탁은 정말 필요할 때만 가끔 하세요. 무조건 지퍼를 다 잠근 뒤 옷감을 반대로 뒤집어 차가운 물로 세척하는 것만이 원단 손상을 가두는 핵심입니다.</p>
+            </div>
+            <div class="bg-emerald-50 border border-emerald-100 p-3.5 rounded-lg">
+              <span class="text-[10.5px] font-extrabold text-emerald-900 flex items-center gap-1">
+                <i class="fa-solid fa-leaf"></i> 버리지 않기 위한 롱런 꿀팁
+              </span>
+              <p class="mt-1 text-[11px] text-emerald-700 leading-relaxed font-semibold">퀴퀴한 땀 냄새가 날 땐 소중한 수자원을 오염시키며 세탁하지 마세요! 청바지를 고이 접어 지퍼백에 꽁꽁 밀봉하고 냉동실에 30분~1시간만 보관하면 악취균이 올스톱 사망하여 산뜻하게 되살아납니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 니트 / 울 (Knit & Wool) -->
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-3xs">
+          <button onclick="toggleAccordion('fabric-knit')" class="w-full px-4.5 py-3.5 flex items-center justify-between text-left">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🧶</span>
+              <div>
+                <h4 class="font-extrabold text-slate-800 text-xs">니트 / 울 (Knit & Wool)</h4>
+                <p class="text-[10px] text-slate-400 font-semibold">포근한 울 스웨터, 카디건, 캐시미어 등</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="icon-fabric-knit"></i>
+          </button>
+          <div id="content-fabric-knit" class="hidden px-5 pb-4 pt-1 border-t border-slate-100 bg-slate-50/50 space-y-3 text-xs text-slate-600">
+            <div>
+              <span class="text-[9px] font-extrabold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">수축 한계점</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-500">알칼리 세제나 뜨거운 물, 세탁기 강한 기계 비틀기를 겪는 순간 아동용 옷처럼 손바닥만 해져 영구 폐기됩니다.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-extrabold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">올바른 소생 관리</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-600">반드시 30도 미만의 냉수에 전용 울 중성샴푸를 풀어주고 오직 손톱 끝으로 조물조물 마사지 손세탁하십시오. 마구 뒤틀어 짜지 마세요.</p>
+            </div>
+            <div class="bg-emerald-50 border border-emerald-100 p-3.5 rounded-lg">
+              <span class="text-[10.5px] font-extrabold text-emerald-900 flex items-center gap-1">
+                <i class="fa-solid fa-leaf"></i> 버리지 않기 위한 롱런 꿀팁
+              </span>
+              <p class="mt-1 text-[11px] text-emerald-700 leading-relaxed font-semibold">스웨터를 세로 옷걸이에 그냥 매달면 어깨가 솟아오르고 기장이 늘어나 쓰레기가 됩니다! 절대 걸지 마시고, 고이 접거나 김밥처럼 돌돌 말아서 서랍장에 수평 보관해 주시는 것만이 평생 입는 최고의 꿀팁입니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 폴리에스테르 / 나일론 (Poly & Synthetic) -->
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-3xs">
+          <button onclick="toggleAccordion('fabric-synthetic')" class="w-full px-4.5 py-3.5 flex items-center justify-between text-left">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🧥</span>
+              <div>
+                <h4 class="font-extrabold text-slate-800 text-xs">폴리에스테르 / 기능성 (Synthetic)</h4>
+                <p class="text-[10px] text-slate-400 font-semibold">패딩, 바람막이, 트레이닝복, 플리스 등</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200" id="icon-fabric-synthetic"></i>
+          </button>
+          <div id="content-fabric-synthetic" class="hidden px-5 pb-4 pt-1 border-t border-slate-100 bg-slate-50/50 space-y-3 text-xs text-slate-600">
+            <div>
+              <span class="text-[9px] font-extrabold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">합성 유분 한계점</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-500">정전기가 잦으며 사람의 땀 냄새 유분 입자가 옷에 박히면 웬만해서 잘 씻기지 않아 쉽게 내버리게 됩니다.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-extrabold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">올바른 소생 관리</span>
+              <p class="mt-1 text-[11px] leading-relaxed font-medium text-slate-600">일상적인 찬물 기계 세탁은 거뜬히 완수하나, 고열 가열 다림질이나 드럼 건조 열풍에는 플라스틱 실이 녹아 수축하므로 무조건 자연건조를 원칙으로 합니다.</p>
+            </div>
+            <div class="bg-emerald-50 border border-emerald-100 p-3.5 rounded-lg">
+              <span class="text-[10.5px] font-extrabold text-emerald-900 flex items-center gap-1">
+                <i class="fa-solid fa-leaf"></i> 버리지 않기 위한 롱런 꿀팁
+              </span>
+              <p class="mt-1 text-[11px] text-emerald-700 leading-relaxed font-semibold">값비싼 기능성 등산복이나 방수 자켓을 일반 유성 섬유유연제로 가차없이 세탁하면, 미세 기능성 방수 숨구멍이 비누 기름막으로 코팅되어 일회용 쓰레기처럼 생명을 마감합니다. 유연제를 일절 삼가세요!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 shadow-md">
+    <div class="max-w-md mx-auto flex justify-around items-center h-16">
+      <!-- Tab 1 Button -->
+      <button onclick="switchTab('tab-stain', this)" class="flex flex-col items-center justify-center w-full h-full text-emerald-500 transition-all font-semibold animate-pulse" id="btn-tab-stain">
+        <i class="fa-solid fa-heart-pulse text-base mb-1"></i>
+        <span class="text-[10px] font-bold">오염 응급실</span>
+      </button>
+
+      <!-- Tab 2 Button -->
+      <button onclick="switchTab('tab-quiz', this)" class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-slate-600 transition-all font-semibold" id="btn-tab-quiz">
+        <i class="fa-solid fa-shield-halved text-base mb-1"></i>
+        <span class="text-[10px] font-bold">소생 퀴즈·도감</span>
+      </button>
+
+      <!-- Tab 3 Button -->
+      <button onclick="switchTab('tab-fabric', this)" class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-slate-600 transition-all font-semibold" id="btn-tab-fabric">
+        <i class="fa-solid fa-leaf text-base mb-1"></i>
+        <span class="text-[10px] font-bold">의류 롱런 공식</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Global Toast Notification Component -->
+  <div id="toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-emerald-600 text-white font-bold text-[11px] px-5 py-3 rounded-full shadow-lg z-[99] opacity-0 pointer-events-none transition-all duration-300">
+    <!-- 메시지 동적 주입 -->
+  </div>
+
+  <!-- JavaScript App Logic -->
+  <script>
+    // 1. 상태 데이터 정의
+    let currentScore = 0;
+    let quizCurrentIndex = 0;
+    let quizLives = 3;
+    let quizSelectedMode = 'game';
+    let currentQuestions = [];
+
+    // 대폭 정비된 15가지 범용 얼룩 소생 데이터베이스
+    const stainData = {
+      kimchi: {
+        title: "🌶️ 김치 국물·한식 소스 소생 차트",
+        campaignMsg: "버리지 마세요! 햇빛이 빨간 색소를 100% 무색 분해해 줍니다.",
+        steps: [
+          "<strong>1단계: 마른 티슈 수직 찍기</strong> - 비벼 닦으면 틈새로 고무처럼 번집니다. 화장지나 거즈를 대고 수직으로 꾹 찍어 표면 국물을 흡수시킵니다.",
+          "<strong>2단계: 주방 세제 마사지</strong> - 유분기와 고춧가루 전분을 완벽 타파하기 위해 마른 오염 부위에 식기용 주방세제를 직접 부어 가볍게 비벼서 거품을 내어 줍니다.",
+          "<strong>3단계: 태양열 자외선 치료</strong> - 세제로 빨고 헹군 뒤, 햇살이 들어오는 밝은 햇빛 아래 반나절 널어둡니다. 자외선이 붉은 식물 성분을 완벽 소멸시켜 투명하게 만들어 줍니다!"
+        ],
+        tip: "양파즙을 으깨 얼룩 앞뒷면에 발라둔 뒤 다음 날 아침 가볍게 비벼 빨아도 섬유 손상 없이 김치 흔적을 99% 순하게 중화시킵니다."
+      },
+      pen: {
+        title: "🖊️ 유성볼펜·잉크·싸인펜 소생 차트",
+        campaignMsg: "주머니 속 낙서 자국, 비싼 세탁소 대신 수건과 물파스 한 장으로 살려내세요.",
+        steps: [
+          "<strong>1단계: 흡수 수건 밑판 대기</strong> - 잉크가 번지면서 주위 섬유까지 오염시키지 않도록 안감 부위에 마른 면 수건이나 도톰한 휴지를 여러 장 포개어 놓습니다.",
+          "<strong>2단계: 알코올/물파스 투여</strong> - 볼펜 유성 성분을 용해시키는 물파스나 손 소독제를 오염에 듬뿍 적셔 줍니다.",
+          "<strong>3단계: 가볍게 꾹꾹 압축</strong> - 녹아 나오는 잉크 자국을 솜이나 화장지로 꾹 눌러 깔아놓은 밑판 쪽으로 스며들게 이염시킵니다."
+        ],
+        tip: "세제 거품을 쓰기 전 절대로 물을 먼저 대면 잉크가 원단 실타래에 응고되어 평생 지워지지 않는 흉터로 남습니다!"
+      },
+      coffee: {
+        title: "☕ 커피·녹차·홍차 카디건 소생 차트",
+        campaignMsg: "색소가 산화되어 갈색 흉터가 되기 전 식초로 연하게 소생시키세요.",
+        steps: [
+          "<strong>1단계: 차가운 냉수 헹굼</strong> - 카페인 음료 속 탄닌은 열을 만나면 박혀 버립니다. 즉시 냉수를 가득 튼 뒤 얼룩을 흐르는 물로 여러 번 연하게 헹굽니다.",
+          "<strong>2단계: 식초와 주방세제 1:1 조합</strong> - 식초의 약산성 수분과 세제 유화력을 1:1로 섞어 얼룩에 올린 뒤 칫솔로 살살 문질러 불려 줍니다.",
+          "<strong>3단계: 찬물 가볍게 세척</strong> - 5분 대기 후 비눗기가 다 없어지도록 찬물에 조물조물 비벼 완벽 복구시킵니다."
+        ],
+        tip: "연유나 시럽 등 단 성분이 들어간 달콤한 커피류는 식초를 쓰기 전 주방세제로 유분 단맛때를 우선 격파하는 것이 순서입니다."
+      },
+      makeup: {
+        title: "💄 파운데이션·비비·화장품 소생 차트",
+        campaignMsg: "옷깃에 묻은 화장 자국, 수분 비누 대신 클렌징 오일로 즉시 구출하세요.",
+        steps: [
+          "<strong>1단계: 건조 원단에 클렌징 오일</strong> - 화장품 베이스는 완벽한 기름 유성 성분입니다. 세안용 클렌징 오일을 마른 오염 부위에 직접 부어 적셔 줍니다.",
+          "<strong>2단계: 오일 믹싱 유화</strong> - 손가락 끝으로 살살 롤링하듯 비비면 화장품의 기름 찌꺼기가 투명하게 녹아 떠오릅니다.",
+          "<strong>3단계: 주방 세제 이중 세정</strong> - 주방세제 한 방울을 올려 오일 성분을 싹 지우고 따끈한 물로 거품 내 헹궈 냅니다."
+        ],
+        tip: "급할 때는 면도 크림(쉐이빙 폼)을 도톰히 올려두고 3분 후 마른 수건으로 밀어내 닦아도 화장 자국이 아주 깔끔하게 사라집니다."
+      },
+      grease: {
+        title: "🥓 삼겹살 기름·식용유 오염 소생 차트",
+        campaignMsg: "시간이 지나면 투명하고 칙칙해지는 고기 기름때, 주방세제 원액으로 박멸됩니다.",
+        steps: [
+          "<strong>1단계: 무조건 마른 상태 준비</strong> - 물기가 있으면 세제 속 계면활성제가 기름을 온전히 밀어내지 못하므로 물 한 방울 없는 마른 원단 그대로 둡니다.",
+          "<strong>2단계: 주방용 세제 원액 침투</strong> - 기름 제거 끝판왕인 주방세제 원액을 오염 자리에 곧바로 떨어뜨립니다.",
+          "<strong>3단계: 주물럭 믹싱 후 온수 세척</strong> - 세제와 유분이 하나로 뭉치도록 비빈 후, 기름기가 녹는 따끈한 물(약 45도)로 거품을 시원히 씻겨 냅니다."
+        ],
+        tip: "이미 오래 전에 굳어 칙칙해진 고기 기름 얼룩은 베이비파우더나 전분가루를 솔솔 도포하고 종이를 덮어 약하게 스팀다리미로 지져내면 가루 위로 흡수되어 나옵니다."
+      },
+      wine: {
+        title: "🍷 레드 와인·포도·붉은 과즙 소생 차트",
+        campaignMsg: "자연 과즙 색소는 비누의 알칼리를 만나면 파랗게 변해 옷을 영영 버리게 만듭니다.",
+        steps: [
+          "<strong>1단계: 탄산수 긴급 도포</strong> - 와인 색소를 뽑아내기 위해 투명한 탄산수나 스프라이트를 얼룩에 붓습니다. 기포의 진동 파동이 색소를 뽑아냅니다.",
+          "<strong>2단계: 약산성 식초 중화</strong> - 절대 알칼리 빨래비누를 가하면 영구 보라색 흉터가 됩니다. 반드시 중성세제와 식초를 섞어 발라 중화시키세요.",
+          "<strong>3단계: 과탄산소다 불림</strong> - 과탄산소다(산소계 표백제)를 푼 따스한 물에 10분만 고이 담가두면 완벽 투명 원단으로 컴백합니다."
+        ],
+        tip: "포도 주스가 가시지 않을 때 의외로 화이트 와인을 부어 가볍게 두드려 주면 레드 와인의 타닌 결합을 상쇄해 주어 손쉽게 빠집니다."
+      },
+      blood: {
+        title: "🩸 피·혈액·생리혈 응급 소생 차트",
+        campaignMsg: "단백질 성분이 온수에 익어 옷감에 굳어버리기 전, 차가운 수분으로 살려내세요.",
+        steps: [
+          "<strong>1단계: 100% 차가운 '냉수' 직수</strong> - 혈액은 40도 이상의 물에 닿으면 고기 단백질처럼 익어 섬유에 달라붙습니다. 즉시 가장 차가운 얼음물로 혈분을 씻어 냅니다.",
+          "<strong>2단계: 소독용 과산화수소 주입</strong> - 약국용 과산화수소를 몇 방울 뿌립니다. 하얀 기포가 뽀글뽀글 일어나며 혈색소의 철분을 무색 파괴합니다.",
+          "<strong>3단계: 주방 세제 마감</strong> - 비누거품을 가볍게 내 헹군 후 그늘에서 시원하게 건조해 줍니다."
+        ],
+        tip: "야외에서 피가 묻어 씻을 수 없다면 본인의 침(침 속 단백질 분해효소)을 연하게 발라 소금물 티슈로 톡톡 대어두는 것도 응고를 지연시키는 좋은 임시처방입니다."
+      },
+      curry: {
+        title: "🍛 황색 소스·양념류 소생 차트",
+        campaignMsg: "카레나 강황 소스는 빨아도 남지만 햇빛에 건조하는 순간 감쪽같이 기화해 소멸됩니다.",
+        steps: [
+          "<strong>1단계: 건더기 제거</strong> - 플라스틱 카드나 수저 모서리로 주변 섬유를 찌르지 않게 양념을 가볍게 긁어 모아 제거합니다.",
+          "<strong>2단계: 식기 주방세제 마찰</strong> - 소스 속에 함유된 식용유 기름기를 없애기 위해 마른 오염 부위에 주방세제를 올리고 양손으로 조물조물 마찰 거품을 유도합니다.",
+          "<strong>3단계: 햇빛 자외선 건조 (가장 핵심!)</strong> - 빨고 난 뒤 누런 자국이 보인다고 버리지 마세요! 햇살이 아주 쨍한 베란다에 반나절 널어두면 자외선 산소 반응으로 색소가 신기하게 무색 기화되어 완벽 분해됩니다."
+        ],
+        tip: "비나 눈이 와 햇빛을 쬐어줄 수 없을 땐 드라이기의 아주 뜨거운 온풍 바람을 얼룩에 밀착하여 오랜 시간 달구어 주어도 유사한 분해 효과를 봅니다."
+      },
+      yellowing: {
+        title: "👕 목때·땀자국 누런 황변 소생 차트",
+        campaignMsg: "목깃이 누렇게 변했다고 절대 버리지 마세요! 산소계 표백제로 원복됩니다.",
+        steps: [
+          "<strong>1단계: 뜨끈한 고온수 대기</strong> - 황변 단백질 유분 때를 불리기 위해 세면대나 대야에 약 50~60도의 뜨거운 물을 풍족히 받습니다.",
+          "<strong>2단계: 산소계 표백 가루 수혈</strong> - 대야 물에 과탄산소다(산소계 표백가루) 2스푼을 탑니다. 뽀글 기포가 올라올 때 셔츠를 푹 잠기게 불립니다.",
+          "<strong>3단계: 칫솔 마찰 후 일반 세탁</strong> - 때가 불어나오면 칫솔로 누런 깃을 가볍게 문질러 때를 민 뒤 물에 돌려 완전히 건조해 줍니다."
+        ],
+        tip: "염소계 락스를 사용하면 섬유 단백질과 결합하여 오히려 더 누렇게 타들어가 평생 복구가 막히고 섬유를 삭게 만듭니다. 무조건 과탄산소다를 쓰세요!"
+      },
+      chocolate: {
+        title: "🍫 초콜릿·진흙·유기 오염 소생 차트",
+        campaignMsg: "물부터 뿌리면 미세 흙이나 초콜릿 지방이 더 깊숙이 침투합니다! 마른 뒤 처치하세요.",
+        steps: [
+          "<strong>1단계: 바짝 건조 후 털기</strong> - 물을 바로 뿌리면 오염이 아주 미세하게 원단 결을 채웁니다. 완전히 건조시킨 뒤 마른 칫솔로 겉가루를 툭툭 털어냅니다.",
+          "<strong>2단계: 오일과 비누 믹싱</strong> - 초콜릿의 카카오 버터 지방 성분을 해소하기 위해 주방세제와 오일을 적셔 조심히 문지릅니다.",
+          "<strong>3단계: 온수 헹굼 처리</strong> - 미지근한 물에 헹구어 주면 섬유 속 깊이 박힌 흙가루와 지방분이 한꺼번에 배출 완료됩니다."
+        ],
+        tip: "진흙이나 커피 원두가루, 초코는 무조건 '말려서 털기' 선행을 고수하셔야 아까운 옷을 망쳐 버리는 사태를 방어합니다."
+      },
+      gum: {
+        title: "🍬 껌·접착류·진득이 이물질 소생 차트",
+        campaignMsg: "끈적하게 섬유를 녹이며 엉겨붙은 껌, 물 대신 얼음 하나로 완벽 박리하세요.",
+        steps: [
+          "<strong>1단계: 얼음 지퍼백 급랭</strong> - 접착 기운은 영하 온도에서 급격히 고착 굳어 비닐처럼 딱딱해집니다. 지퍼백에 얼음을 넣고 껌 위에 5분간 밀착해 굳힙니다.",
+          "<strong>2단계: 굳은 알갱이 똑 떼어내기</strong> - 돌처럼 딱딱해진 껌을 숟가락 모서리로 툭 밀어 껍질 벗기듯 가볍게 뜯어 분리시킵니다.",
+          "<strong>3단계: 남은 접착 찌꺼기 아세톤</strong> - 미세하게 결에 붙어 있는 성분은 화장 솜에 식용유나 아세톤을 발라 살살 비벼 마무리하면 감쪽같이 해결됩니다."
+        ],
+        tip: "껌이 달라붙은 상태로 탈수기에 옷을 가차없이 던져 넣으면 온 세탁통 빨래들이 진득이 테러를 겪게 되니 반드시 선 소생 후 세탁하세요!"
+      },
+      crayon: {
+        title: "🎨 크레파스·양초·물감 오염 소생 차트",
+        campaignMsg: "크레파스나 양초 촛농은 다리미 열로 흡수해 뽑아내는 게 골든타임입니다.",
+        steps: [
+          "<strong>1단계: 흡수 에이포 종이 샌드위치</strong> - 크레파스 왁스 기름을 흡수시키기 위해 얼룩 부위 앞뒤 면에 빳빳한 흰 종이를 샌드위치처럼 대어 줍니다.",
+          "<strong>2단계: 다리미 저온 히팅</strong> - 다리미 온도를 아주 약하거나 중간 단계로 조절하여 종이 위를 지긋이 눌러 다립니다.",
+          "<strong>3단계: 왁스 종이 흡수 유도</strong> - 뜨거운 온기로 크레파스의 왁스가 오일에 녹으면서 샌드위치로 댄 종이 위로 쓱 스며 나와 이염 분리됩니다.",
+          "<strong>4단계: 주방 세제 가벼운 헹굼</strong> - 잔여 색소는 주방세제로 비벼 찬물에 빨면 기적처럼 새 옷으로 복귀합니다."
+        ],
+        tip: "먹물이나 포스터 칼라 물감은 완전히 마르기 전, 흐르는 비눗물에 손가락 끝으로 계속 문질러 씻어내 줘야 영구 흉터를 완화합니다."
+      },
+      grass: {
+        title: "🌿 잔디·풀밭 즙 오염 소생 차트",
+        campaignMsg: "야외 풀밭에서 묻은 초록빛 풀독 얼룩, 알칼리 비누 대신 약산성 식초로 씻어내세요.",
+        steps: [
+          "<strong>1단계: 식초와 소독용 알코올 준비</strong> - 풀즙 속 식물성 엽록소(클로로필) 색소는 식초의 아세트산과 알코올의 솔벤트 성분에 녹아 해체됩니다.",
+          "<strong>2단계: 알코올로 톡톡 두드리기</strong> - 화장 솜에 알코올을 흠뻑 적셔 풀자국 위를 가볍게 톡톡 눌러 초록 색소를 아래 수건으로 빼냅니다.",
+          "<strong>3단계: 식초액으로 가볍게 비비기</strong> - 남아있는 노란 잔여 엽록소는 식초액을 조금 묻혀 부드럽게 비벼 중화한 뒤 따뜻한 물로 세척합니다."
+        ],
+        tip: "풀 얼룩에 일반 비눗물을 도포하면 풀 속 단백질 및 무기 염료가 고정되어 갈색으로 평생 착색되니 꼭 식초를 활용한 소생법을 이용하셔야 합니다."
+      },
+      deodorant: {
+        title: "🧼 피지 분비물·겨드랑이 데오도란트 소생 차트",
+        campaignMsg: "땀 피지와 화장품 성분이 만나 단단히 뭉친 누런 겨드랑이 자국, 버리지 말고 주방세제로 유화하세요.",
+        steps: [
+          "<strong>1단계: 주방용 액체 비누 준비</strong> - 땀에 함유된 노폐물 피지와 데오도란트 속 알루미늄 성분이 결합된 찌든 때이므로, 피지 유분을 싹 거두는 주방세제가 가장 훌륭한 구원수입니다.",
+          "<strong>2단계: 원액 침투 및 15분 불림</strong> - 누런 피지 부위에 물 없이 세제 원액을 도톰히 펴 바르고 15분 동안 섬유가 불도록 방치합니다.",
+          "<strong>3단계: 따뜻한 칫솔질 가공</strong> - 40도의 따뜻한 온수를 조금씩 묻혀가며 칫솔로 슥슥 마사지한 뒤 물에 돌려 완전히 헹굽니다."
+        ],
+        tip: "이 얼룩을 그대로 세탁기에 넣고 말리면 섬유 결이 코팅되어 평생 딱딱하고 냄새나는 폐기 의류가 됩니다. 꼭 단독 솔질을 먼저 거쳐주세요!"
+      },
+      ketchup: {
+        title: "🥫 토마토케첩·고추장·빨간 양념 소생 차트",
+        campaignMsg: "케첩의 산성 성분과 고추장의 끈적이는 전분 오염도 식초와 주방세제로 100% 치료할 수 있습니다.",
+        steps: [
+          "<strong>1단계: 마른 수저로 가볍게 긁어내기</strong> - 표면에 남은 붉은 진액 덩어리를 옷이 상하지 않게 한 방향으로 부드럽게 긁어 거둡니다.",
+          "<strong>2단계: 식초 수분 투척</strong> - 케첩은 강한 산성 식품이므로 물 대신 식초를 몇 방울 떨어뜨려 붉은 토마토 색소를 1차 분해합니다.",
+          "<strong>3단계: 주방세제 유분 제거</strong> - 식초가 스며들면 주방세제를 얹어 양념 소스의 베이스 오일을 비벼 녹인 뒤 미지근한 물로 가뿐히 행굽니다."
+        ],
+        tip: "토마토의 라이코펜 색소 역시 한식 김치국물처럼 자외선 반응에 분해되므로 빨아준 후 햇빛에 마지막 건조를 쬐어주면 하얗게 소멸됩니다."
+      }
+    };
+
+    // 세탁 기호 도감 및 퀴즈 데이터
+    const labelDatabase = [
+      {
+        id: "wash-hand",
+        name: "손세탁 권장 라벨",
+        desc: "30도 이하 미지근한 물에 약한 손세탁(중성세제 사용)이 권장되며, 세탁기를 함부로 마구 돌리면 형태가 구겨지고 수축해 버리게 되는 치명적인 기호입니다.",
+        hint: "물그릇에 다정하게 담긴 사람 손 모양이 그려져 있어요.",
+        quizQuestion: "이 기호는 옷감 수축을 막기 위해 오직 손세탁만 약하게 하라는 표시이다. 맞을까요?",
+        options: ["네, 손으로 가볍게 주물러 빨아야 평생 입습니다", "아니요, 드럼세탁기에 건조까지 쾌속 코스로 돌려도 됩니다", "드라이클리닝만 온종일 주구장창 맡기라는 뜻입니다"],
+        correctIndex: 0,
+        svg: `<svg viewBox="0 0 100 100" class="w-16 h-16 stroke-current text-slate-700 fill-none stroke-[3.5]" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 15 50 Q 50 65 85 50 L 80 80 Q 50 85 20 80 Z" />
+                <path d="M 25 57 C 25 57 32 30 38 30 C 44 30 43 45 48 45 C 53 45 52 25 58 25 C 64 25 64 35 68 35 C 72 35 75 42 75 42" stroke-linecap="round"/>
+                <path d="M 10 40 Q 50 48 90 40" stroke-dasharray="4 3" />
+              </svg>`
+      },
+      {
+        id: "dry-no",
+        name: "드라이클리닝 금지 라벨",
+        desc: "동그란 원(드라이) 위에 시뻘건 X표시가 쳐진 금지령입니다. 이를 무시하고 화학 석유 기름 약품에 옷을 담그면 나염 프린팅이 전부 지워지거나 충전재가 다 손상되어 못 입게 됩니다.",
+        hint: "원형 도형 위에 선 두 개가 겹친 커다란 금지 X 표시가 존재합니다.",
+        quizQuestion: "동그라미 위에 빨간 X자가 표기된 특수 자켓을 세탁소에 맡겨 드라이클리닝하면 어떻게 될까요?",
+        options: ["화학 반응으로 섬유 코팅이나 수지가 다 녹아내려 못 입게 된다", "미세 먼지가 빠지고 새 보송함이 배로 살아난다", "옷 두께가 도톰해지고 기장이 길어진다"],
+        correctIndex: 0,
+        svg: `<svg viewBox="0 0 100 100" class="w-16 h-16 stroke-current text-slate-700 fill-none stroke-[3.5]" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="28" />
+                <line x1="20" y1="20" x2="80" y2="80" stroke="#f43f5e" stroke-width="4.5" />
+                <line x1="80" y1="20" x2="20" y2="80" stroke="#f43f5e" stroke-width="4.5" />
+              </svg>`
+      },
+      {
+        id: "dryer-ok",
+        name: "기계 열풍 건조 가능 라벨",
+        desc: "네모난 사각형(건조 지침) 내부 동그라미(기계 드럼통)가 있는 기호입니다. 맘 편히 빨래방 건조기나 가정용 건조기에 팽팽 넣고 건조해도 변형이 거의 없는 아주 안전한 면 계열 의류에 붙습니다.",
+        hint: "가전제품 건조기 내부 드럼 원형 통의 실루엣을 모티브로 삼았습니다.",
+        quizQuestion: "정사각형 속에 완전한 원이 수록된 세탁 라벨의 올바른 의류 건조 방법은?",
+        options: ["반드시 높은 숲속 잣나무에 걸어 자연풍에 건조", "고온 드럼 건조기 기계 건조를 완벽 허용", "저온 스팀 다림질로 물기를 펴서 말리기"],
+        correctIndex: 1,
+        svg: `<svg viewBox="0 0 100 100" class="w-16 h-16 stroke-current text-slate-700 fill-none stroke-[3.5]" xmlns="http://www.w3.org/2000/svg">
+                <rect x="22" y="22" width="56" height="56" rx="6" />
+                <circle cx="50" cy="50" r="18" />
+              </svg>`
+      },
+      {
+        id: "iron-low",
+        name: "저온 다림질 조건부 허용",
+        desc: "다림질 모형 속 조그만 점 한 개가 지정되어 있습니다. 합성섬유, 아크릴, 나일론 등은 80~120도의 미지근하고 낮은 온도에서만 주름을 살살 펴야지, 뜨거운 판으로 대는 순간 소중한 옷이 불에 탄 비닐처럼 완전히 녹아내립니다.",
+        hint: "다리미 아이콘 배 속에 온도 레벨을 상징하는 점박이 1개가 찍혀있습니다.",
+        quizQuestion: "다리미 바디 안에 조그마한 구멍 점 한 개가 표시된 의류의 올바른 다림질 수칙은?",
+        options: ["가장 뜨거운 극강 열기로 고온 압축 다림질", "약 80~120도 사이의 저온으로 섬세히 다림질", "절대 다림질을 해서는 안 되며 자연 주름 유지"],
+        correctIndex: 1,
+        svg: `<svg viewBox="0 0 100 100" class="w-16 h-16 stroke-current text-slate-700 fill-none stroke-[3.5]" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 20 65 L 80 65 C 80 65 80 40 65 40 L 40 40 C 30 40 20 50 20 65 Z" stroke-linejoin="round" />
+                <path d="M 40 40 L 40 30 L 70 30 L 70 40" stroke-linecap="round" />
+                <circle cx="50" cy="52" r="3.5" fill="currentColor" />
+              </svg>`
+      },
+      {
+        id: "bleach-no",
+        name: "표백 금지 경고 라벨",
+        desc: "삼각형(표백을 상징) 위에 빨간 X가 단단히 표기되었습니다. 알칼리가 과도한 락스, 염소계 표백제를 세탁할 때 한 방울이라도 부으면 옷 색깔이 백지장처럼 흐리멍덩하게 다 바래서 즉시 폐기 처분 행렬로 가게 됩니다.",
+        hint: "삼각형 도형에 커다란 금지 사선 선 두 개가 교차합니다.",
+        quizQuestion: "삼각형에 엑스 자가 쳐진 경고가 부착된 흰색 옷이 살짝 누래졌을 때 해결 수단은?",
+        options: ["락스 원액에 옷 전체를 한 시간 동안 숙성시킨다", "염소계 락스류 표백제 절대 금지! 산소계 표백제로 약하게 씻어낸다", "옷을 단호히 쓰레기 봉투에 던져 넣는다"],
+        correctIndex: 1,
+        svg: `<svg viewBox="0 0 100 100" class="w-16 h-16 stroke-current text-slate-700 fill-none stroke-[3.5]" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,18 85,78 15,78" stroke-linejoin="round" />
+                <line x1="20" y1="20" x2="80" y2="80" stroke="#f43f5e" stroke-width="4.5" />
+                <line x1="80" y1="20" x2="20" y2="80" stroke="#f43f5e" stroke-width="4.5" />
+              </svg>`
+      },
+      {
+        id: "wring-no",
+        name: "짜기 금지 라벨",
+        desc: "꽈배기 사탕처럼 비틀어진 형상에 금지 무늬를 올렸습니다. 원단의 섬유 가닥이 한순간 비틀리며 가출하는 현상을 막기 위함이며 탈수기에서 세게 돌리면 변형으로 옷을 고치지 못하고 망가뜨려 결국 옷 버리기의 지름길이 됩니다.",
+        hint: "빨래를 움켜쥐고 양손으로 가차 없이 뒤트는 일러스트 실루엣 위에 X가 있습니다.",
+        quizQuestion: "꽈배기 모양 꼬임 위에 무서운 금지 X 표시가 놓인 세탁 기호를 제대로 지키는 법은?",
+        options: ["탈수기 최강 900RPM 모드로 세탁기가 쪼그라들게 탈수", "손으로 비틀어 짜지 말고 마른 수건 사이에 끼워 가볍게 토닥이며 물기 배출", "건조대에 거꾸로 매달아 당겨 말리기"],
+        correctIndex: 1,
+        svg: `<svg viewBox="0 0 100 100" class="w-16 h-16 stroke-current text-slate-700 fill-none stroke-[3.5]" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 25 50 Q 50 30 75 50 M 25 50 Q 50 70 75 50" />
+                <line x1="38" y1="38" x2="48" y2="62" />
+                <line x1="48" y1="38" x2="58" y2="62" />
+                <line x1="58" y1="38" x2="68" y2="62" />
+                <line x1="20" y1="20" x2="80" y2="80" stroke="#f43f5e" stroke-width="4.5" />
+                <line x1="80" y1="20" x2="20" y2="80" stroke="#f43f5e" stroke-width="4.5" />
+              </svg>`
+      },
+      {
+        id: "hang-shade",
+        name: "그늘 뉘어서 자연 건조 라벨",
+        desc: "사각형 안에 빗금선(그늘 차광막)과 눕혀놓은 일자형 막대(뉘어서 말리기)가 조화롭게 녹아 있습니다. 햇빛을 직통으로 받으면 누렇게 익는 고급 양모, 캐시미어, 니트가 햇빛 공격에 산화되어 버려지는 참사를 완벽 제압하는 꿀팁 건조 가이드입니다.",
+        hint: "사각형 박스의 좌상단 그늘 구석 빗금과 수평 지탱 받침대를 체크하세요.",
+        quizQuestion: "정사각형 내부 상단 대각선 빗금들과 가로 누운 중앙 수평선이 연출하는 의미는?",
+        options: ["오전 햇살이 내리쬐는 테라스의 철제 철조망에 세로로 장시간 건조", "자외선을 차단한 어둡고 평평한 장소에 옷을 조심히 뉘어서 안전하게 건조", "스팀 소독 기기에 90분 강제 살균 처리"],
+        correctIndex: 1,
+        svg: `<svg viewBox="0 0 100 100" class="w-16 h-16 stroke-current text-slate-700 fill-none stroke-[3.5]" xmlns="http://www.w3.org/2000/svg">
+                <rect x="22" y="22" width="56" height="56" rx="6" />
+                <line x1="22" y1="40" x2="40" y2="22" />
+                <line x1="22" y1="55" x2="55" y2="22" />
+                <line x1="30" y1="50" x2="70" y2="50" stroke-width="4" stroke-linecap="round" />
+              </svg>`
+      }
+    ];
+
+    // 2. 초기 구동 온로드 이벤트 처리
+    window.onload = function() {
+      renderDictionary();
+      resetQuizGame();
+      updateScoreUI();
+    };
+
+    // 토스트 팝업 함수
+    function showToast(message, isSuccess = false) {
+      const toast = document.getElementById('toast');
+      toast.innerText = message;
+      toast.className = `fixed bottom-20 left-1/2 -translate-x-1/2 font-bold text-[11px] px-5 py-3 rounded-full shadow-lg z-[99] transition-all duration-300 ${isSuccess ? 'bg-emerald-600 text-white' : 'bg-red-500 text-white'}`;
+      toast.style.opacity = '1';
+      
+      setTimeout(() => {
+        toast.style.opacity = '0';
+      }, 2500);
+    }
+
+    // 3. 탭 전환 제어 로직
+    function switchTab(tabId, element) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.add('hidden'));
+
+      document.getElementById(tabId).classList.remove('hidden');
+
+      const navButtons = document.querySelectorAll('nav button');
+      navButtons.forEach(btn => {
+        btn.classList.remove('text-emerald-500', 'text-slate-600');
+        btn.classList.add('text-slate-400');
+      });
+
+      element.classList.add('text-emerald-500');
+      element.classList.remove('text-slate-400');
+    }
+
+    // 4. 얼룩 소생 처방전 상세 가이드 노출 (Tab 1)
+    function showStainSolution(stainKey) {
+      const data = stainData[stainKey];
+      if (!data) return;
+
+      const container = document.getElementById('solution-container');
+      const placeholder = document.getElementById('solution-placeholder');
+
+      placeholder.classList.add('hidden');
+      container.classList.remove('hidden');
+
+      let stepsHtml = '';
+      data.steps.forEach(step => {
+        stepsHtml += `
+          <li class="flex items-start gap-2.5 text-xs text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-200/50">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span>
+            <span class="leading-relaxed font-medium">${step}</span>
+          </li>
+        `;
+      });
+
+      container.innerHTML = `
+        <div class="bg-white border-2 border-emerald-500/80 rounded-2xl p-5 space-y-4 shadow-md animate-fade-in">
+          <div>
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-black text-slate-950 flex items-center gap-1">
+                <i class="fa-solid fa-file-medical text-emerald-500"></i> ${data.title}
+              </h4>
+              <span class="text-[9px] uppercase font-black tracking-wider px-2 py-0.5 bg-emerald-500 text-white rounded-full">의류 심폐소생중</span>
+            </div>
+            <p class="text-[11px] text-emerald-700 font-extrabold mt-1.5 flex items-center gap-1.5 bg-emerald-50 p-2.5 rounded-lg border border-emerald-100">
+              <i class="fa-solid fa-leaf text-xs"></i> 캠페인 메시지: ${data.campaignMsg}
+            </p>
+          </div>
+          
+          <div class="space-y-2">
+            <h5 class="text-xs font-extrabold text-slate-800 flex items-center gap-1.5">
+              <i class="fa-solid fa-kit-medical text-emerald-500"></i> 소생 가이드 행동지침
+            </h5>
+            <ul class="space-y-2">
+              ${stepsHtml}
+            </ul>
+          </div>
+
+          <div class="bg-emerald-50/75 border border-emerald-100 p-4 rounded-xl flex gap-3">
+            <div class="text-lg text-emerald-600"><i class="fa-solid fa-circle-question"></i></div>
+            <div>
+              <h6 class="text-xs font-black text-emerald-900">지구를 지키는 특별 팁</h6>
+              <p class="text-[10px] text-emerald-700 leading-relaxed font-bold mt-0.5">${data.tip}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // 5. 퀴즈 게임 모드 변경 제어 (Tab 2)
+    function switchQuizMode(mode) {
+      quizSelectedMode = mode;
+      const btnGame = document.getElementById('btn-mode-game');
+      const btnDict = document.getElementById('btn-mode-dict');
+      const panelGame = document.getElementById('quiz-game-panel');
+      const panelDict = document.getElementById('quiz-dictionary-panel');
+
+      if (mode === 'game') {
+        btnGame.className = "flex-1 py-1.5 text-xs font-bold rounded-lg text-center bg-emerald-500 text-white transition-all";
+        btnDict.className = "flex-1 py-1.5 text-xs font-bold rounded-lg text-center text-slate-500 transition-all hover:text-slate-700";
+        panelGame.classList.remove('hidden');
+        panelDict.classList.add('hidden');
+      } else {
+        btnDict.className = "flex-1 py-1.5 text-xs font-bold rounded-lg text-center bg-emerald-500 text-white transition-all";
+        btnGame.className = "flex-1 py-1.5 text-xs font-bold rounded-lg text-center text-slate-500 transition-all hover:text-slate-700";
+        panelDict.classList.remove('hidden');
+        panelGame.classList.add('hidden');
+      }
+    }
+
+    // 6. 퀴즈 게임 주요 로직 (서바이벌 3지선다)
+    function resetQuizGame() {
+      const shuffled = [...labelDatabase].sort(() => 0.5 - Math.random());
+      currentQuestions = shuffled.slice(0, 5);
+      quizCurrentIndex = 0;
+      quizLives = 3;
+      renderCurrentQuestion();
+    }
+
+    function renderCurrentQuestion() {
+      const heartsContainer = document.getElementById('quiz-hearts');
+      heartsContainer.innerHTML = '';
+      for (let i = 0; i < 3; i++) {
+        if (i < quizLives) {
+          heartsContainer.innerHTML += `<i class="fa-solid fa-heart text-red-500 text-xs"></i>`;
+        } else {
+          heartsContainer.innerHTML += `<i class="fa-regular fa-heart text-slate-300 text-xs"></i>`;
+        }
+      }
+
+      if (quizLives <= 0) {
+        showGameOver(false);
+        return;
+      }
+
+      if (quizCurrentIndex >= currentQuestions.length) {
+        showGameOver(true);
+        return;
+      }
+
+      const q = currentQuestions[quizCurrentIndex];
+      document.getElementById('quiz-progress-text').innerText = `QUESTION ${quizCurrentIndex + 1}/${currentQuestions.length}`;
+      document.getElementById('quiz-symbol-svg').innerHTML = q.svg;
+
+      const optionsContainer = document.getElementById('quiz-options');
+      optionsContainer.innerHTML = '';
+      
+      q.options.forEach((opt, idx) => {
+        optionsContainer.innerHTML += `
+          <button onclick="submitAnswer(${idx})" class="w-full text-left bg-slate-50 hover:bg-emerald-50 hover:border-emerald-300 active:bg-slate-200 border border-slate-200 p-4.5 rounded-xl text-xs font-extrabold text-slate-700 flex justify-between items-center transition-all duration-150 shadow-3xs">
+            <span>${idx + 1}. ${opt}</span>
+            <i class="fa-solid fa-shield-halved text-emerald-400 text-sm"></i>
+          </button>
+        `;
+      });
+
+      const feedback = document.getElementById('quiz-feedback');
+      feedback.classList.add('hidden');
+    }
+
+    function submitAnswer(selectedIndex) {
+      const q = currentQuestions[quizCurrentIndex];
+      const feedback = document.getElementById('quiz-feedback');
+      feedback.classList.remove('hidden');
+
+      if (selectedIndex === q.correctIndex) {
+        currentScore += 12; // 소생 1건당 12kg 이산화탄소 절감 효과
+        updateScoreUI();
+        feedback.className = "p-4 rounded-xl text-center font-bold text-xs bg-emerald-50 text-emerald-700 border border-emerald-100";
+        feedback.innerHTML = `🎉 올바른 처방입니다! 옷의 수명이 5년 증가합니다.<br><span class="text-[10px] font-medium text-slate-600 mt-1 block">${q.name}: ${q.desc}</span>`;
+        showToast("구조 성공! 탄소 저감량 +12kg", true);
+      } else {
+        quizLives--;
+        feedback.className = "p-4 rounded-xl text-center font-bold text-xs bg-red-50 text-red-600 border border-red-100";
+        feedback.innerHTML = `❌ 잘못된 세탁법입니다! 옷감을 손상시켜 쓰레기가 되기 쉽습니다.<br><span class="text-[10px] font-medium text-slate-600 mt-1 block">올바른 기호 해독은 <strong class="text-emerald-600 font-semibold">'${q.options[q.correctIndex]}'</strong> 입니다.</span>`;
+        showToast("생명력을 잃었습니다!", false);
+      }
+
+      const buttons = document.querySelectorAll('#quiz-options button');
+      buttons.forEach(btn => btn.disabled = true);
+
+      setTimeout(() => {
+        quizCurrentIndex++;
+        renderCurrentQuestion();
+      }, 3500);
+    }
+
+    function showGameOver(isVictory) {
+      const container = document.getElementById('quiz-game-panel');
+      if (isVictory) {
+        container.innerHTML = `
+          <div class="bg-white border-2 border-emerald-500 rounded-2xl p-6 text-center space-y-4 shadow-sm animate-fade-in">
+            <span class="text-5xl">🏆</span>
+            <h3 class="text-base font-black text-emerald-600">녹색 의류 구조 대원 임명 완료!</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              모든 미스터리 기호를 마스터하였습니다.<br>
+              이제 잘못된 세탁 습관으로 옷을 망치고 지구에 무거운 짐을 더해주는 낭비를 완벽히 멈출 수 있습니다.
+            </p>
+            <div class="bg-emerald-50 p-4.5 rounded-xl border border-emerald-100">
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase tracking-widest">내가 공헌한 탄소 절감량</span>
+              <div class="text-2xl font-black text-emerald-600 mt-1">${currentScore} kg CO₂</div>
+            </div>
+            <button onclick="restartQuiz()" class="w-full py-3 bg-emerald-500 text-white font-bold rounded-xl text-xs hover:bg-emerald-600 active:scale-95 transition-all shadow-xs">
+              한 번 더 복습하고 지구 구하기
+            </button>
+          </div>
+        `;
+      } else {
+        container.innerHTML = `
+          <div class="bg-white border-2 border-red-500 rounded-2xl p-6 text-center space-y-4 shadow-sm animate-fade-in">
+            <span class="text-5xl">😢</span>
+            <h3 class="text-base font-black text-red-500">수축 및 훼손으로 쓰레기화!</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              잘못 해독한 세탁 지침 때문에 아까운 세 제품이 수축되어 완전히 손상되었습니다.<br>
+              도감 목록을 꼼꼼히 톺아보고 다시 지구를 지켜 주세요!
+            </p>
+            <button onclick="restartQuiz()" class="w-full py-3 bg-red-500 text-white font-bold rounded-xl text-xs hover:bg-red-600 active:scale-95 transition-all shadow-xs">
+              다시 소생 수칙 도전하기
+            </button>
+          </div>
+        `;
+      }
+    }
+
+    function restartQuiz() {
+      const container = document.getElementById('quiz-game-panel');
+      container.innerHTML = `
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 relative overflow-hidden">
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-[10px] text-emerald-600 font-bold uppercase tracking-wider" id="quiz-progress-text">QUESTION 1/5</span>
+            <div class="flex gap-1 text-red-500" id="quiz-hearts"></div>
+          </div>
+          <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 flex flex-col items-center justify-center min-h-[150px] relative">
+            <div id="quiz-symbol-svg" class="w-20 h-20 text-slate-800 flex items-center justify-center"></div>
+            <p class="text-[10px] text-slate-400 mt-2 font-bold text-center">이 케어라벨을 무시하면 옷을 망치고 지구에 폐기물을 더하게 됩니다!</p>
+          </div>
+          <div class="mt-4 space-y-2" id="quiz-options"></div>
+        </div>
+        <div id="quiz-feedback" class="hidden p-3 rounded-xl text-center font-bold text-xs tab-transition"></div>
+      `;
+      resetQuizGame();
+    }
+
+    // 7. 세탁 라벨 도감 리스트 렌더링 (Tab 2)
+    function renderDictionary() {
+      const listContainer = document.getElementById('dictionary-list');
+      listContainer.innerHTML = '';
+
+      labelDatabase.forEach((item, index) => {
+        listContainer.innerHTML += `
+          <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-4 hover:border-emerald-300 transition-all cursor-pointer shadow-3xs" onclick="showDictDetail(${index})">
+            <div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center shrink-0 border border-slate-100">
+              ${item.svg}
+            </div>
+            <div class="flex-1">
+              <h5 class="text-xs font-black text-slate-800 flex items-center gap-1.5">
+                ${item.name}
+              </h5>
+              <p class="text-[10px] text-slate-400 mt-0.5 line-clamp-2 leading-relaxed font-semibold">${item.desc}</p>
+            </div>
+            <i class="fa-solid fa-circle-info text-emerald-400 shrink-0 text-sm"></i>
+          </div>
+        `;
+      });
+    }
+
+    // 도감 상세정보 모달
+    function showDictDetail(index) {
+      const item = labelDatabase[index];
+      if (!item) return;
+
+      const modal = document.createElement('div');
+      modal.className = "fixed inset-0 z-[100] flex items-end justify-center bg-slate-900/40 backdrop-blur-xs p-4 animate-fade-in";
+      modal.id = "dict-detail-modal";
+      modal.onclick = function(e) {
+        if (e.target === modal) modal.remove();
+      };
+
+      modal.innerHTML = `
+        <div class="bg-white border border-slate-200 rounded-t-2xl max-w-md w-full p-5 space-y-4 shadow-2xl animate-fade-in">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-black text-slate-900">${item.name}</h4>
+            <button onclick="document.getElementById('dict-detail-modal').remove()" class="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-500 transition-all">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          
+          <div class="flex justify-center bg-slate-50 p-5 rounded-xl border border-slate-100">
+            <div class="w-20 h-20 text-slate-800">
+              ${item.svg}
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <span class="text-[9px] font-extrabold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">케어 정보 안내</span>
+            <p class="text-xs text-slate-600 leading-relaxed font-bold">${item.desc}</p>
+          </div>
+
+          <div class="bg-emerald-50/70 border border-emerald-100 p-3.5 rounded-xl text-xs text-emerald-800 leading-relaxed font-semibold">
+            <strong class="font-extrabold text-emerald-900"><i class="fa-solid fa-circle-info"></i> 구조 가이드 요약:</strong><br>
+            ${item.hint} 올바로 파악하면 실수로 섬유가 쪼그라들거나 코팅이 손상되어 옷을 내다버리게 되는 낭비를 원천 봉쇄할 수 있습니다.
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+    }
+
+    function updateScoreUI() {
+      document.getElementById('score-badge').innerText = `🌱 탄소 저감: ${currentScore} kg`;
+    }
+
+    // 8. 아코디언 제어 (Tab 3)
+    function toggleAccordion(id) {
+      const content = document.getElementById(`content-${id}`);
+      const icon = document.getElementById(`icon-${id}`);
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+</html>
+
+```
